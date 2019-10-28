@@ -147,7 +147,7 @@ func (c Client) Do(req *http.Request, v interface{}) (*http.Response, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	// defer resp.Body.Close()
 
 	err = CheckResponse(resp)
 	if err != nil {
